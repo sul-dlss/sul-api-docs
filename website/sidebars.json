@@ -1,0 +1,9 @@
+{
+  "docs": {
+    "Stanford Libraries Documentation": ["about"],
+    "Public APIs": ["library-hours/about"]
+  },
+  "library-hours": {
+    "lib": ["api"]
+  }
+}
