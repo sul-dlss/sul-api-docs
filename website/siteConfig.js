@@ -41,18 +41,14 @@ const siteConfig = {
   },
 
   /* Custom fonts for website */
-  /*
   fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
+    sulFont: [
+      "Source Sans Pro",
+      "Arial Unicode MS",
+      "Helvetica",
+      "sans-serif"
     ]
   },
-  */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Stanford Libraries`,
