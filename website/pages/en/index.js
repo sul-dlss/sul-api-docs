@@ -63,8 +63,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl('about.html')}>Try It Out</Button>
+            <Button href={docUrl('about.html')}>Read the docs</Button>
           </PromoSection>
+          <img src={`${baseUrl}img/undraw_web_development_w2vv.svg`} alt="Project Logo" className="homePageLogo" />
         </div>
       </SplashContainer>
     );
