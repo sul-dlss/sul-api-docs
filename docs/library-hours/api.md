@@ -5,20 +5,20 @@ title: Library Hours
 Library Hours is an application that allows Stanford Libraries to set hours of operation for various libraries on campus. It also provides an API in which consumers can query information about the hours of operations.
 
 
-# API
+## API
 
 The base url used for this service is `https://library-hours.stanford.edu`.
 
-## Hours for When
+### Hours for When
 
 ```
 GET /api/v1/library/{library_id}/location/{location_id}/hours/for/{when}
 ```
 
-### Summary
+#### Summary
 Allows for consumers to request hours for a specific library location at a given time.
 
-### Parameters
+#### Parameters
 
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
@@ -26,12 +26,12 @@ Name | Located In | Description | Required | Type | Default | Example
 `location_id` | url | ID of a location within a library | Yes | string | null | `information-center`
 `when` | url | Date requesting location hours. Valid values include `today` or an ISO 8601 formatted calendar date `2019-08-22` | Yes | string | null | `2019-08-22`
 
-### Example request
+#### Example request
 ```sh
 $ curl https://library-hours.stanford.edu/api/v1/library/green/location/information-center/hours/for/2019-08-22
 ```
 
-### Example response
+#### Example response
 ```json
 [
   {
