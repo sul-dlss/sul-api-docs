@@ -5,7 +5,7 @@ title: Library Hours
 Library Hours is an application that allows Stanford Libraries to set hours of operation for various libraries on campus. It also provides an API in which consumers can query information about the hours of operations.
 
 
-## JSON API
+## API
 
 The base url used for this service is `https://library-hours.stanford.edu`. The Hours API uses the [JSON:API specification](https://jsonapi.org/).
 
