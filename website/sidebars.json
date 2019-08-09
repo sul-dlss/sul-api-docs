@@ -1,7 +1,7 @@
 {
   "docs": {
     "Stanford Libraries Documentation": ["about"],
-    "Available APIs": ["library-hours/api", "embed/api"]
+    "Available APIs": ["library-hours/api", "embed/api", "iiif/api"]
   },
   "library-hours": {
     "lib": ["api"]
