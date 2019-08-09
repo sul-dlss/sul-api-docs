@@ -7,15 +7,17 @@ Library Hours is an application that allows Stanford Libraries to set hours of o
 
 ## API
 
+### Hours for When
+
 The base url used for this service is `https://library-hours.stanford.edu`. The Hours API uses the [JSON:API specification](https://jsonapi.org/).
 
-### Summary
+#### Summary
 
 ```
 GET /libraries/{library_id}/locations/{location_id}.json?from={start_date}&to={end_date}
 ```
 
-### Parameters
+#### Parameters
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `library_id` | url | ID of a library | Yes | string | null | `green`
@@ -23,23 +25,23 @@ Name | Located In | Description | Required | Type | Default | Example
 `start_date` | params | Date range start for requesting location hours. Accepts an ISO 8601 formatted calendar date (`YYYY-MM-DD`) | No | string | null | `2019-08-01`
 `end_date` | params | End date (inclusive) requesting location hours. Accepts an ISO 8601 formatted calendar date (`YYYY-MM-DD`)| No | string | null | `2019-08-07`
 
-### Example Requests
+#### Example Requests
 
-#### All libraries, all locations
+##### All libraries, all locations
 ```
 https://library-hours.stanford.edu/libraries.json
 ```
-#### One library, all locations
+##### One library, all locations
 ```
 https://library-hours.stanford.edu/libraries/green.json
 ```
 
-#### One library, one location
+##### One library, one location
 ```
 https://library-hours.stanford.edu/libraries/green/locations/information-center.json
 ```
 
-#### One library, all locations, date range
+##### One library, all locations, date range
 ```
 https://library-hours.stanford.edu/libraries/green.json?from=2019-08-01&to=2019-08-07
 ```
