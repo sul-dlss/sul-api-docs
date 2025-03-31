@@ -15,14 +15,15 @@ The base url used for this service is `https://stacks.stanford.edu`.
 
 Will return binary download of content that from the Stanford Digital Library. Has access controls enabled so only authorized requests are allowed.
 
-** [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) is enabled for this API.
-** This API advertises [HTTP Accept headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) enabling partial and resumable downloads.
+**[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) is enabled for this API.**
+This API advertises [HTTP Accept headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) enabling partial and resumable downloads.
 
 ```
 GET /file/{id}/{file_name}
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `id` | url | The ID of a digital object | Yes | string | null | `ab123cd4567`
@@ -54,6 +55,7 @@ GET /object/{id}
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `id` | url | The ID of a digital object | Yes | string | null | `ab123cd4567`

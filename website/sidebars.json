@@ -1,9 +1,0 @@
-{
-  "docs": {
-    "Stanford Libraries Documentation": ["about"],
-    "Available APIs": ["digital-stacks/api", "embed/api", "iiif/api", "library-hours/api", "purl/api"]
-  },
-  "library-hours": {
-    "lib": ["api"]
-  }
-}

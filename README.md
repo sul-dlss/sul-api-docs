@@ -4,27 +4,21 @@ Documentation site for Stanford Libraries public API's. This static site is buil
 
 ## Installation
 
-After cloning the repository change directory to `website`.
-
-```sh
-$ cd website
-```
-
 Install dependencies.
 
 ```sh
-$ npm install
+$ gem install jekyll
 ```
 
 Start server
 
 ```sh
-$ npm start
+$ jekyll serve
 ```
 
 ## Adding a new API
 
-To add a new service API, create a new directory under `./docs` as the service name.
+To add a new service API, create a new directory under `./_docs` as the service name.
 
 Then create a new file under that directory `api.md`.
 
@@ -32,7 +26,6 @@ Then create a new file under that directory `api.md`.
 
 ```md
     ---
-    id: api
     title: Nice name of service
     ---
 

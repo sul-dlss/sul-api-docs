@@ -18,6 +18,7 @@ GET /libraries/{library_id}/locations/{location_id}.json?from={start_date}&to={e
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `library_id` | url | ID of a library | Yes | string | null | `green`
