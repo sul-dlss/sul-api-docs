@@ -20,6 +20,7 @@ GET /{id}
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `id` | url | The ID of a digital object | Yes | string | null | `ab123cd4567`
@@ -52,6 +53,7 @@ GET /{id}.xml
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `id` | url | The ID of a digital object | Yes | string | null | `ab123cd4567`
@@ -100,6 +102,7 @@ GET /{id}.mods
 ```
 
 #### Parameters
+
 Name | Located In | Description | Required | Type | Default | Example
 ---- | ---------- | ----------- | -------- | ------ | ------- | ------
 `id` | url | The ID of a digital object | Yes | string | null | `ab123cd4567`

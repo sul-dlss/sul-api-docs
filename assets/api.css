@@ -1,0 +1,58 @@
+/* Accessibility fix */
+code {
+  --bs-code-color: #8F1E4B;
+}
+
+/**
+ * Tables
+ */
+table {
+  --spacing-unit: 30px;
+  margin-bottom: var(--spacing-unit);
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid var(--stanford-fog-light);
+  tr {
+    &:nth-child(even) {
+      background-color: lighten(var(--stanford-fog-light), 6%);
+    }
+  }
+  th, td {
+    padding: calc(var(--spacing-unit) * 0.3333333333) calc(var(--spacing-unit) * 0.5);
+  }
+  th {
+    background-color: var(--stanford-fog-light);
+    border: 1px solid darken(var(--stanford-fog-light), 4%);
+    border-bottom-color: darken(var(--stanford-fog-light), 12%);
+  }
+  td {
+    border: 1px solid var(--stanford-fog-light);
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  @include relative-font-size(0.9375);
+  border: 1px solid var(--stanford-fog-light);
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
