@@ -28,7 +28,7 @@ Name | Located In | Description | Required | Type | Default | Example
 
 #### Example request
 ```sh
-$ curl https://embed.stanford.edu/embed?url=https://purl.stanford.edu/fw090jw3474
+$ curl 'https://embed.stanford.edu/embed?url=https://purl.stanford.edu/fw090jw3474'
 ```
 
 #### Example response
@@ -38,9 +38,9 @@ $ curl https://embed.stanford.edu/embed?url=https://purl.stanford.edu/fw090jw347
   "version": "1.0",
   "provider_name": "SUL Embed Service",
   "title": "1st Street Arcade San Francisco",
-  "height": 420,
+  "height": "31.25rem",
   "width": null,
-  "html": "<iframe\n        src='https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/fw090jw3474&' height='420px' width='100%'\n        frameborder='0' marginwidth='0' marginheight='0' scrolling='no' allowfullscreen\n      />"
+  "html": "<iframe\n        src='https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/fw090jw3474&' style='height: 31.25rem; width: 100%;'\n        frameborder='0' marginwidth='0' marginheight='0' scrolling='no' allowfullscreen\n      />"
 }
 ```
 
@@ -62,7 +62,7 @@ Name | Located In | Description | Required | Type | Default | Example
 
 #### Example request
 ```sh
-$ curl https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/fw090jw3474
+$ curl 'https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/fw090jw3474'
 ```
 
 #### Example response
@@ -70,28 +70,67 @@ $ curl https://embed.stanford.edu/iframe?url=https://purl.stanford.edu/fw090jw34
 <!DOCTYPE html>
 <html>
   <head>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script></script>
+    <script src="//js.honeybadger.io/v6.5/honeybadger.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      Honeybadger.configure({
+        apiKey: 'f07b0c1b',
+        environment: 'prod',
+        debug: false,
+        onerror: true
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80J719XWE5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  const debug = false
+  gtag('js', new Date());
+  // To turn off debug mode, exclude the parameter altogether (cannot just set to false)
+  // See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
+  const args = {
+    'collection': document.querySelector('link[rel="up"]')?.getAttribute('href')
+  }
+  if (debug) {
+    args["debug_mode"] = debug
+  }
+  gtag('config', 'G-80J719XWE5', args)
+</script>
+<script src="https://cdn.jsdelivr.net/npm/ahoy.js@0.4.3/dist/ahoy.js"
+  integrity="sha384-s9X57Wbu8jIIErBMhudZJEAS1ZkelgbMI7/HUqsgjFBBm9IXyfbpKQ+ZoWUUvpgE"
+  crossorigin="anonymous"></script>
+<script>
+  // Set up Ahoy
+  ahoy.configure({
+    visitDuration: 60, // measured in minutes; this is Zenodo's default
+    cookies: false, // use anonymity sets instead
+    urlPrefix: "https://sdr-metrics-api-prod.stanford.edu",
+  });
+</script>
+
+    
+    <link rel="stylesheet" href="/assets/mirador-63c391df.css" />
+    <link rel="up" href="https://purl.stanford.edu/sk882gx0113" />
   </head>
-  <body>
-    <div class="sul-embed-container "
-      id='sul-embed-object' style='display:none; max-height:420px; max-width:100%;'>
-      <div class='sul-embed-body sul-embed-m3' style="max-height: 420px" data-sul-embed-theme="https://embed.stanford.edu/assets/m3-9e06cc02b2cfbcc6025cbbd98225e65b1d4ba45f15501487bebc9576fa69fb8f.css">
-        <div
-          id='sul-embed-m3'
-          class='m3'
-          data-m3-uri='https://purl.stanford.edu/fw090jw3474/iiif/manifest'
-          data-canvas-id=''
-          data-canvas-index=''
-          data-hide-title=''
-          data-show-attribution='false'
-          data-search=''
-          data-suggested-search=''
-          style='height: 420px; width:100%'>
-        </div>
-        <script>;jQuery.ajax({url: "https://embed.stanford.edu/packs/js/m3-805fab97844b19976d49.js", cache: true, dataType: 'script'});</script>
-      </div>
+  <body style="margin: 0">
+    <div class="sul-embed-container" id='sul-embed-object' hidden>
+    <div
+      id='sul-embed-mirador'
+      class='mirador'
+      data-mirador-uri='https://purl.stanford.edu/fw090jw3474/iiif/manifest'
+      data-viewer-config=''
+      data-canvas-id=''
+      data-canvas-index=''
+      data-hide-title='false'
+      data-show-attribution='false'
+      data-cdl='false'
+      data-search=''
+      data-suggested-search=''>
     </div>
+
+    <script src="/vite/assets/mirador-BZjCj4LH.js" crossorigin="anonymous" type="module"></script>
+
+    </div>
+
   </body>
 </html>
 ```
